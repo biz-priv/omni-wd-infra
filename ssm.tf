@@ -46,3 +46,15 @@ resource "aws_ssm_parameter" "omni_wd_milestone_update_status_table_table_status
     STAGE       = var.env
   }
 }
+
+resource "aws_ssm_parameter" "omni_wd_bill_to" {
+  name  = "/${var.application}/${var.env}/wd-bill-to"
+  type  = "String"
+  value = var.bill_to
+  tags = {
+    Application = var.application
+    CreatedBy   = var.created_by
+    Environment = var.env
+    STAGE       = var.env
+  }
+}
