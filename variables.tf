@@ -22,3 +22,8 @@ variable "application" {
   type     = string
   nullable = false
 }
+
+variable "bill_to" {
+  type     = string
+  nullable = false
+}
